@@ -12,11 +12,8 @@ LABEL maintainer="${USER_NAME} <${USER_EMAIL}>" \
 
 ENV DESIRED_VERSION $DESIRED_VERSION
 
-RUN apt update
-RUN apt -y install git && git --version
-RUN apt -y install curl
-RUN apt -y install wget
-RUN apt -y install tar
+RUN apk update
+RUN apk add vim wget curl build-base
 RUN python3 -m ensurepip
 RUN python3 -m pip
 RUN pip3 install --no-cache --upgrade pip setuptools
