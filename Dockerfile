@@ -13,7 +13,7 @@ LABEL maintainer="${USER_NAME} <${USER_EMAIL}>" \
 ENV DESIRED_VERSION $DESIRED_VERSION
 
 RUN apk update
-RUN apk add vim wget curl build-base
+RUN apk add vim wget curl git build-base
 RUN python3 -m ensurepip
 RUN python3 -m pip
 RUN pip3 install --no-cache --upgrade pip setuptools
