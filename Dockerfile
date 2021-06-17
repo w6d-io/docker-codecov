@@ -16,9 +16,8 @@ RUN apk update
 RUN apk add vim wget curl build-base
 RUN python3 -m ensurepip
 RUN python3 -m pip
-RUN pip3 install codecov==2.1.0
 RUN pip3 install --no-cache --upgrade pip setuptools
-RUN echo $PATH
+RUN pip3 install codecov==2.1.0
 RUN ls -la ~/
 # run the entrypoint (only when the image is instantiated into a container)
-ENTRYPOINT ["/bin/bash", "-c", "codecov"]
+#ENTRYPOINT ["/bin/bash", "-c", "codecov"]
